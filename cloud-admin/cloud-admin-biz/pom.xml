@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.longyx</groupId>
+        <artifactId>cloud-admin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.longyx</groupId>
+    <artifactId>cloud-admin-biz</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>cloud-admin-biz</name>
+    <description>admin 用户鉴权服务</description>
+
+    <dependencies>
+        <!-- for swagger -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>${swagger-spring-boot-starter.version}</version>
+        </dependency>
+        <!--公共 工具包 -->
+        <dependency>
+            <groupId>com.longyx</groupId>
+            <artifactId>cloud-common-util</artifactId>
+            <version>${cloud-common.version}</version>
+        </dependency>
+        <!--公共配置包 包含base包-->
+        <dependency>
+            <groupId>com.longyx</groupId>
+            <artifactId>cloud-common-config</artifactId>
+            <version>${cloud-common.version}</version>
+        </dependency>
+        <!--公共security包 包含admin api 及 包含base-->
+        <dependency>
+            <groupId>com.longyx</groupId>
+            <artifactId>cloud-common-security</artifactId>
+            <version>${cloud-common.version}</version>
+        </dependency>
+        <!--actuator监管-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--eureka client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

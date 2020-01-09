@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="RoleMapper">
+    <resultMap id="BaseResultMap" type="com.longyx.admin.api.entity.role.Role">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="ROLE_ID" jdbcType="INTEGER" property="roleId"/>
+        <result column="ROLE_NAME" jdbcType="VARCHAR" property="roleName"/>
+        <result column="ROLE_CODE" jdbcType="VARCHAR" property="roleCode"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="DESCRIPTION" jdbcType="VARCHAR" property="description"/>
+        <result column="ORGANIZATION_ID" jdbcType="BIGINT" property="organizationId"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="CREATE_USER" jdbcType="BIGINT" property="createUser" />
+        <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="UPDATE_USER" jdbcType="BIGINT" property="updateUser" />
+        <collection property="resourceSet" column="id"
+                    fetchType="lazy"
+                    select="ResourceMapper.findResourcesByRoleId"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID, ROLE_NAME, ROLE_CODE, CREATE_TIME, DESCRIPTION, ORGANIZATION_ID
+    </sql>
+
+    <select id="findRolesByUserId" resultMap="BaseResultMap">
+        select r.id, r.role_id, r.role_name, r.description, r.organization_id, r.create_time, r.create_user, r.update_time, r.update_user
+        from role r,
+        user_role ur
+        where r.id = ur.role_id
+        and ur.user_id = #{id}
+    </select>
+
+</mapper>

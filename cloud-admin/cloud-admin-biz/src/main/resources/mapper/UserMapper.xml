@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyx.admin.biz.mapper.user.UserMapper">
+    <resultMap id="BaseResultMap" type="com.longyx.admin.api.entity.user.User">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="USERNAME" jdbcType="VARCHAR" property="username"/>
+        <result column="NICKNAME" jdbcType="VARCHAR" property="nickname"/>
+        <result column="PASSWORD" jdbcType="VARCHAR" property="password"/>
+        <result column="SEX" jdbcType="INTEGER" property="sex"/>
+        <result column="PHONE" jdbcType="VARCHAR" property="phone"/>
+        <result column="EMAIL" jdbcType="VARCHAR" property="email"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="LAST_LOGIN_IP" jdbcType="VARCHAR" property="lastLoginIp"/>
+        <result column="LAST_LOGIN_TIME" jdbcType="TIMESTAMP" property="lastLoginTime"/>
+        <result column="IS_DELETED" jdbcType="INTEGER" property="isDeleted"/>
+        <result column="STATUS" jdbcType="INTEGER" property="status"/>
+        <result column="HEAD_IMAGE" jdbcType="VARCHAR" property="headImage"/>
+        <result column="ORGANIZATION_ID" jdbcType="BIGINT" property="organizationId"/>
+        <result column="COMP_ID" jdbcType="BIGINT" property="compId"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="CREATE_USER" jdbcType="BIGINT" property="createUser" />
+        <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="UPDATE_USER" jdbcType="BIGINT" property="updateUser" />
+        <collection property="roleList" ofType="com.longyx.admin.api.entity.role.Role"
+                    column="id"
+                    select="com.longyx.admin.biz.mapper.role.RoleMapper.findRolesByUserId"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapVO" type="com.longyx.admin.api.vo.UserVo">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="USERNAME" jdbcType="VARCHAR" property="username"/>
+        <result column="NICKNAME" jdbcType="VARCHAR" property="nickname"/>
+        <result column="PASSWORD" jdbcType="VARCHAR" property="password"/>
+        <result column="SEX" jdbcType="INTEGER" property="sex"/>
+        <result column="PHONE" jdbcType="VARCHAR" property="phone"/>
+        <result column="EMAIL" jdbcType="VARCHAR" property="email"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="STATUS" jdbcType="INTEGER" property="status"/>
+        <result column="HEAD_IMAGE" jdbcType="VARCHAR" property="headImage"/>
+        <result column="ORGANIZATION_ID" jdbcType="BIGINT" property="organizationId"/>
+        <result column="COMP_ID" jdbcType="BIGINT" property="compId"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID, USERNAME, NICKNAME, PASSWORD, SEX, PHONE, EMAIL, CREATE_TIME, UPDATE_TIME, LAST_LOGIN_IP, LAST_LOGIN_TIME, IS_DELETED, STATUS, HEAD_IMAGE, DEPT_ID, COMP_ID
+    </sql>
+
+    <select id="findByUserName" parameterType="string" resultMap="BaseResultMap">
+        select  ID, USERNAME, NICKNAME, PASSWORD, STATUS
+        from sys_user
+        WHERE 1 = 1
+        <if test="username != null and username != '' ">
+            AND username = #{username}
+        </if>
+    </select>
+
+    <select id="findByUserId" parameterType="long" resultMap="BaseResultMap">
+        select  ID, USERNAME, NICKNAME, HEAD_IMAGE, PHONE, EMAIL, DEPT_ID, STATUS
+        from sys_user
+        WHERE id = #{userId}
+    </select>
+
+    <select id="findUserVoList" parameterType="com.longyx.admin.api.vo.UserVo"
+            resultMap="BaseResultMapVO">
+        select ID, USERNAME, NICKNAME, HEAD_IMAGE, PHONE, EMAIL, CREATE_TIME, DEPT_ID, STATUS, CREATE_TIME
+        from sys_user
+        <where>
+            <if test="username != null and username != ''">
+                AND username = #{username}
+            </if>
+        </where>
+    </select>
+
+
+    <insert id="addUserSelective" useGeneratedKeys="true" keyProperty="id">
+
+        insert into sys_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="username != null">
+                username,
+            </if>
+            <if test="nickname != null">
+                nickname,
+            </if>
+
+            <if test="password != null">
+                password,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="createUser != null">
+                creatUser,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="updateUser != null">
+                update_user,
+            </if>
+            <if test="lastLoginIp != null">
+                last_login_ip,
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time,
+            </if>
+            <if test="isDeleted != null">
+                isDeleted,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="headImage != null">
+                head_image,
+            </if>
+            <if test="organizationId != null">
+                organization_id,
+            </if>
+            <if test="compId != null">
+                comp_id
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="phone != null">
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=VARCHAR},
+            </if>
+            <if test="lastLoginIp != null">
+                #{lastLoginIp,jdbcType=VARCHAR},
+            </if>
+            <if test="lastLoginTime != null">
+                #{lastLoginTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDeleted != null">
+                #{isDeleted,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="headImage != null">
+                #{headImage,jdbcType=VARCHAR},
+            </if>
+            <if test="organizationId != null">
+                #{organizationId,jdbcType=INTEGER},
+            </if>
+            <if test="compId != null">
+                #{compId,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateUserByIdSelective">
+        update sys_user
+        <set>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                nickname = #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time= #{createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser,jdbcType=VARCHAR},
+            </if>
+
+            <if test="lastLoginIp != null">
+                last_login_ip = #{lastLoginIp,jdbcType=VARCHAR} ,
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP} ,
+            </if>
+            <if test="isDeleted != null">
+                is_deleted = #{isDeleted,jdbcType=VARCHAR} ,
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER} ,
+            </if>
+            <if test="headImage != null">
+                head_image = #{headImage,jdbcType=VARCHAR} ,
+            </if>
+            <if test="organizationId != null">
+                organizationId = #{organizationId,jdbcType=BIGINT} ,
+            </if>
+            <if test="compId != null">
+                comp_id = #{compId,jdbcType=BIGINT} ,
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+</mapper>

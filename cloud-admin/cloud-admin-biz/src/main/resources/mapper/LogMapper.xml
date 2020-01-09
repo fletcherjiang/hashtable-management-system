@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyx.admin.biz.mapper.log.LogMapper">
+    <resultMap id="BaseResultMap" type="com.longyx.admin.api.entity.log.Log">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="USERNAME" jdbcType="VARCHAR" property="username"/>
+        <result column="URI" jdbcType="VARCHAR" property="uri"/>
+        <result column="METHOD_NAME" jdbcType="VARCHAR" property="methodName"/>
+        <result column="PARAMS" jdbcType="VARCHAR" property="params" />
+        <result column="CLASS_NAME" jdbcType="VARCHAR" property="className" />
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="TIMES" jdbcType="INTEGER" property="times" />
+        <result column="USER_ID" jdbcType="INTEGER" property="userId" />
+        <result column="IP" jdbcType="VARCHAR" property="ip" />
+        <result column="METHOD" jdbcType="VARCHAR" property="method" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID, USERNAME, URI, METHOD_NAME, PARAMS, CLASS_NAME, CREATE_TIME, TIMES, USER_ID, IP, METHOD
+    </sql>
+
+    <insert id="addLogBySelective">
+
+        insert into log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="username != null">
+                username,
+            </if>
+
+            <if test="uri != null">
+                uri,
+            </if>
+            <if test="methodName != null">
+                method_name,
+            </if>
+            <if test="params != null">
+                params,
+            </if>
+            <if test="className != null">
+                class_name,
+            </if>
+
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="times != null">
+                times,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="ip != null">
+                ip,
+            </if>
+
+            <if test="method != null">
+                method,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+
+            <if test="uri != null">
+                #{uri,jdbcType=VARCHAR},
+            </if>
+            <if test="methodName != null">
+                #{methodName,jdbcType=VARCHAR},
+            </if>
+            <if test="params != null">
+                #{params,jdbcType=VARCHAR},
+            </if>
+            <if test="className != null">
+                #{className,jdbcType=VARCHAR},
+            </if>
+            <if test="times != null">
+                #{times,jdbcType=INTEGER},
+            </if>
+
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="ip != null">
+                #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="method != null">
+                #{method,jdbcType=VARCHAR}
+            </if>
+
+        </trim>
+    </insert>
+
+</mapper>

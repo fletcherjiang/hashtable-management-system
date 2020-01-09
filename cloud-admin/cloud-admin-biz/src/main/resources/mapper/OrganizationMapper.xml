@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyx.admin.biz.mapper.organization.OrganizationMapper">
+    <resultMap id="BaseResultMap" type="com.longyx.admin.api.entity.organization.SysOrganization">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="NUM" jdbcType="INTEGER" property="num"/>
+        <result column="PID" jdbcType="BIGINT" property="pid"/>
+        <result column="PIDS" jdbcType="VARCHAR" property="pids"/>
+        <result column="SIMPLE_NAME" jdbcType="VARCHAR" property="simpleName" />
+        <result column="FULL_NAME" jdbcType="VARCHAR" property="fullName" />
+        <result column="TIPS" jdbcType="VARCHAR" property="tips" />
+        <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+        <result column="ORGANIZATION_TYPE" jdbcType="INTEGER" property="organizationType" />
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="CREATE_USER" jdbcType="VARCHAR" property="createUser" />
+        <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateUser" />
+        <result column="UPDATE_USER" jdbcType="VARCHAR" property="updateUser" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID, NUM, PID, PIDS, SIMPLE_NAME, FULL_NAME, TIPS, ADDRESS, ORGANIZATION_TYPE, CREATE_TIME, CRETATE_USER, UPDATE_TIME, UPDATE_USER
+    </sql>
+
+    <insert id="addOrganizationBySelective">
+        insert into sys_organization
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null and id != 0">
+                id,
+            </if>
+            <if test="num != null">
+                num,
+            </if>
+            <if test="pid != null">
+                pid,
+            </if>
+            <if test="pids != null">
+                pids
+            </if>
+            <if test="simpleName != null">
+                simple_name,
+            </if>
+            <if test="fullName != null">
+                full_name,
+            </if>
+            <if test="tips != null">
+                tips,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="organizationType != null">
+                organization_type,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="updateTime != null">
+                update_user,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null and id != 0 ">
+                #{id,jdbcType=BIGINT} ,
+            </if>
+            <if test="num != null">
+                #{num,jdbcType=INTEGER},
+            </if>
+            <if test="pid != null">
+                #{pid,jdbcType=VARCHAR},
+            </if>
+            <if test="pids != null">
+                #{pids,jdbcType=VARCHAR},
+            </if>
+            <if test="simpleName != null">
+                #{simpleName,jdbcType=VARCHAR},
+            </if>
+            <if test="fullName != null">
+                #{fullName,jdbcType=VARCHAR},
+            </if>
+            <if test="tips != null">
+                #{tips,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="organizationType != null">
+                #{organizationType,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=VARCHAR}
+            </if>
+        </trim>
+    </insert>
+
+    <delete id="updateOrganizationBySelective">
+        update sys_organization
+        <set>
+            <if test="id != null and id != 0">
+                id = #{id},
+            </if>
+            <if test="num != null">
+                num = #{num},
+            </if>
+            <if test="pid != null">
+                pid = #{pid},
+            </if>
+            <if test="pids != null">
+                pids = #{pids},
+            </if>
+            <if test="simpleName != null">
+                simple_name = #{simpleName},
+            </if>
+            <if test="fullName != null">
+                full_name = #fullName},
+            </if>
+            <if test="tips != null">
+                tips = #{tips},
+            </if>
+            <if test="address != null">
+                address = #{address},
+            </if>
+            <if test="organizationType != null">
+                organization_type = #{organizationType},
+            </if>
+            <if test="createTime != null">
+                create_time= #{createTime},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser}
+            </if>
+        </set>
+        where id = #{id}
+    </delete>
+
+</mapper>

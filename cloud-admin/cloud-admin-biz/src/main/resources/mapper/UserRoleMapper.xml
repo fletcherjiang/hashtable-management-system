@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longyx.admin.biz.mapper.user.UserRoleMapper">
+    <resultMap id="BaseResultMap" type="com.longyx.admin.api.entity.user.UserRole">
+        <id column="id" property="id"/>
+        <result column="role_id" property="roleId"/>
+        <result column="user_id" property="userId"/>
+    </resultMap>
+
+    <insert id="addUserRoleBySelective">
+        insert into user_role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="userId != null">
+                user_id
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="roleId != null">
+                #{roleId,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>
