@@ -1,16 +1,16 @@
 package com.longyx.admin.biz.service.role;
 
-import com.tydic.admin.api.entity.resource.Resource;
-import com.tydic.admin.api.entity.role.Role;
-import com.tydic.admin.api.entity.role.RoleResource;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.api.vo.RoleVo;
+import com.longyx.admin.api.entity.resource.Resource;
+import com.longyx.admin.api.entity.role.Role;
+import com.longyx.admin.api.entity.role.RoleResource;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.api.vo.RoleVo;
 
 import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.role
+ * @Package: com.longyx.admin.biz.service.role
  * @ClassName: RoleService
  */
 public interface RoleService {

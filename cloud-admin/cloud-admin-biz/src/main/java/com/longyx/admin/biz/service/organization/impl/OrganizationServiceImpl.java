@@ -1,8 +1,8 @@
 package com.longyx.admin.biz.service.organization.impl;
 
-import com.tydic.admin.api.entity.organization.SysOrganization;
-import com.tydic.admin.biz.mapper.organization.OrganizationMapper;
-import com.tydic.admin.biz.service.organization.OrganizationService;
+import com.longyx.admin.api.entity.organization.SysOrganization;
+import com.longyx.admin.biz.mapper.organization.OrganizationMapper;
+import com.longyx.admin.biz.service.organization.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

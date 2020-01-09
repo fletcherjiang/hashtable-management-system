@@ -1,8 +1,8 @@
 package com.longyx.admin.biz.service.notice;
 
-import com.tydic.admin.api.entity.notice.Notice;
-import com.tydic.admin.api.vo.NoticeVo;
-import com.tydic.admin.api.vo.PageResultVo;
+import com.longyx.admin.api.entity.notice.Notice;
+import com.longyx.admin.api.vo.NoticeVo;
+import com.longyx.admin.api.vo.PageResultVo;
 
 import java.util.List;
 

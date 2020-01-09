@@ -1,9 +1,9 @@
 package com.longyx.admin.biz.controller;
 
-import com.tydic.admin.biz.service.authority.AuthorityService;
-import com.tydic.admin.biz.service.authority.OauthClientDetailsService;
-import com.tydic.common.base.support.ApiResponse;
-import com.tydic.common.base.support.BaseController;
+import com.longyx.admin.biz.service.authority.AuthorityService;
+import com.longyx.admin.biz.service.authority.OauthClientDetailsService;
+import com.longyx.common.base.support.ApiResponse;
+import com.longyx.common.base.support.BaseController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.controller
+ * @Package: com.longyx.admin.biz.controller
  * @ClassName: AuthorityController
  * @Date: 2019/9/28 13:59
  */

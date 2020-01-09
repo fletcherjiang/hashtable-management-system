@@ -1,8 +1,8 @@
 package com.longyx.admin.biz.mapper.role;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.tydic.admin.api.entity.role.Role;
-import com.tydic.admin.api.vo.RoleVo;
+import com.longyx.admin.api.entity.role.Role;
+import com.longyx.admin.api.vo.RoleVo;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.dao.role
+ * @Package: com.longyx.admin.biz.dao.role
  * @ClassName: RoleDao
  */
 @Repository

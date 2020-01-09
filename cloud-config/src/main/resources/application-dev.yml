@@ -10,7 +10,7 @@ spring:
           password: lyx484520
           search-paths: config-repo
           basedir: F:\\java-training\\localGitRepo\\
-          uri: 
+          uri: https://github.com/JoeAnimation/backstorage_manage_lyx
       label: master
 server:
   port: 8888

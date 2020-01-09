@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.aspect;
 
-import com.tydic.common.base.util.SecurityUtil;
+import com.longyx.common.base.util.SecurityUtil;
 import org.apache.commons.beanutils.BeanUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -27,10 +27,10 @@ public class MapperAspect {
     private final static String UPDATETIME = "updateTime";
 
 
-    @Pointcut("execution(* com.tydic.admin.biz.mapper.*.update*(..))")
+    @Pointcut("execution(* com.longyx.admin.biz.mapper.*.update*(..))")
     public void update() { }
 
-    @Pointcut("execution(* com.tydic.admin.biz.mapper.*.insert*(..))")
+    @Pointcut("execution(* com.longyx.admin.biz.mapper.*.insert*(..))")
     public void insert() { }
 
 

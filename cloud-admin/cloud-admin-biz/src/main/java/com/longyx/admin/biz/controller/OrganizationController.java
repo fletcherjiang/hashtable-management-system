@@ -1,8 +1,8 @@
 package com.longyx.admin.biz.controller;
 
-import com.tydic.admin.api.entity.organization.SysOrganization;
-import com.tydic.admin.biz.service.organization.OrganizationService;
-import com.tydic.common.base.constants.GlobalsConstants;
+import com.longyx.admin.api.entity.organization.SysOrganization;
+import com.longyx.admin.biz.service.organization.OrganizationService;
+import com.longyx.common.base.constants.GlobalsConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

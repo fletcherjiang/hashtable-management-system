@@ -1,9 +1,9 @@
 package com.longyx.admin.biz.controller;
 
-import com.tydic.admin.api.entity.resource.Resource;
-import com.tydic.admin.biz.service.resource.ResourceService;
-import com.tydic.common.base.constants.GlobalsConstants;
-import com.tydic.common.base.util.SecurityUtil;
+import com.longyx.admin.api.entity.resource.Resource;
+import com.longyx.admin.biz.service.resource.ResourceService;
+import com.longyx.common.base.constants.GlobalsConstants;
+import com.longyx.common.base.util.SecurityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

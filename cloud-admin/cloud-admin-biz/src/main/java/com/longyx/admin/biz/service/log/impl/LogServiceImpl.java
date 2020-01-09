@@ -1,11 +1,11 @@
 package com.longyx.admin.biz.service.log.impl;
 
 
-import com.tydic.admin.api.entity.log.Log;
-import com.tydic.admin.api.vo.LogVo;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.biz.mapper.log.LogMapper;
-import com.tydic.admin.biz.service.log.LogService;
+import com.longyx.admin.api.entity.log.Log;
+import com.longyx.admin.api.vo.LogVo;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.biz.mapper.log.LogMapper;
+import com.longyx.admin.biz.service.log.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

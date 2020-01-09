@@ -1,9 +1,9 @@
 package com.longyx.admin.biz.aspect;
 
-import com.tydic.admin.api.entity.log.Log;
-import com.tydic.admin.biz.service.log.LogService;
-import com.tydic.common.base.util.HttpUtils;
-import com.tydic.common.base.util.SecurityUtil;
+import com.longyx.admin.api.entity.log.Log;
+import com.longyx.admin.biz.service.log.LogService;
+import com.longyx.common.base.util.HttpUtils;
+import com.longyx.common.base.util.SecurityUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -27,7 +27,7 @@ public class LogAspect {
     @Autowired
     private LogService logService;
 
-    @Pointcut("execution(* com.tydic.admin.biz.controller.*.*(..))")
+    @Pointcut("execution(* com.longyx.admin.biz.controller.*.*(..))")
     public void logPointCut(){}
 
 

@@ -1,17 +1,17 @@
 package com.longyx.admin.biz.service.authority.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.tydic.admin.api.entity.authority.OauthClientDetails;
-import com.tydic.admin.biz.mapper.authority.OauthClientDetailsMapper;
-import com.tydic.admin.biz.service.authority.OauthClientDetailsService;
-import com.tydic.common.base.constants.GlobalsConstants;
+import com.longyx.admin.api.entity.authority.OauthClientDetails;
+import com.longyx.admin.biz.mapper.authority.OauthClientDetailsMapper;
+import com.longyx.admin.biz.service.authority.OauthClientDetailsService;
+import com.longyx.common.base.constants.GlobalsConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.authority.impl
+ * @Package: com.longyx.admin.biz.service.authority.impl
  * @ClassName: OauthClientDetailsServiceImpl
  * @Date: 2019/11/5 09:34
  */

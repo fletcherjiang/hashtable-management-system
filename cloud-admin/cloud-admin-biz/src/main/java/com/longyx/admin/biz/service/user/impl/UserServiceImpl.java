@@ -3,21 +3,21 @@ package com.longyx.admin.biz.service.user.impl;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.tydic.admin.api.entity.organization.SysOrganization;
-import com.tydic.admin.api.entity.resource.Resource;
-import com.tydic.admin.api.entity.role.Role;
-import com.tydic.admin.api.entity.user.User;
-import com.tydic.admin.api.entity.user.UserRole;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.api.vo.UserVo;
-import com.tydic.admin.biz.mapper.organization.OrganizationMapper;
-import com.tydic.admin.biz.mapper.user.UserMapper;
-import com.tydic.admin.biz.mapper.user.UserRoleMapper;
-import com.tydic.admin.biz.service.user.UserService;
-import com.tydic.common.base.constants.GlobalsConstants;
-import com.tydic.common.base.exception.CommonException;
-import com.tydic.common.security.properties.SecurityOAuth2ClientProperties;
-import com.tydic.common.util.HttpCallOtherInterfaceUtils;
+import com.longyx.admin.api.entity.organization.SysOrganization;
+import com.longyx.admin.api.entity.resource.Resource;
+import com.longyx.admin.api.entity.role.Role;
+import com.longyx.admin.api.entity.user.User;
+import com.longyx.admin.api.entity.user.UserRole;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.api.vo.UserVo;
+import com.longyx.admin.biz.mapper.organization.OrganizationMapper;
+import com.longyx.admin.biz.mapper.user.UserMapper;
+import com.longyx.admin.biz.mapper.user.UserRoleMapper;
+import com.longyx.admin.biz.service.user.UserService;
+import com.longyx.common.base.constants.GlobalsConstants;
+import com.longyx.common.base.exception.CommonException;
+import com.longyx.common.security.properties.SecurityOAuth2ClientProperties;
+import com.longyx.common.util.HttpCallOtherInterfaceUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ import java.util.*;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.user.impl
+ * @Package: com.longyx.admin.biz.service.user.impl
  * @ClassName: UserServiceImpl
  * @Date: 2019/11/5 09:19
  */

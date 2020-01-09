@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.mapper.organization;
 
-import com.tydic.admin.api.entity.organization.SysOrganization;
+import com.longyx.admin.api.entity.organization.SysOrganization;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

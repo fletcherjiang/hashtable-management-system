@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.mapper.resource;
 
-import com.tydic.admin.api.entity.resource.Resource;
+import com.longyx.admin.api.entity.resource.Resource;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

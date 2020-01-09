@@ -1,14 +1,14 @@
 package com.longyx.admin.biz.service.role.impl;
 
-import com.tydic.admin.api.entity.resource.Resource;
-import com.tydic.admin.api.entity.role.Role;
-import com.tydic.admin.api.entity.role.RoleResource;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.api.vo.RoleVo;
-import com.tydic.admin.biz.mapper.role.RoleMapper;
-import com.tydic.admin.biz.mapper.role.RoleResourceMapper;
-import com.tydic.admin.biz.service.role.RoleService;
-import com.tydic.common.base.constants.GlobalsConstants;
+import com.longyx.admin.api.entity.resource.Resource;
+import com.longyx.admin.api.entity.role.Role;
+import com.longyx.admin.api.entity.role.RoleResource;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.api.vo.RoleVo;
+import com.longyx.admin.biz.mapper.role.RoleMapper;
+import com.longyx.admin.biz.mapper.role.RoleResourceMapper;
+import com.longyx.admin.biz.service.role.RoleService;
+import com.longyx.common.base.constants.GlobalsConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.role.impl
+ * @Package: com.longyx.admin.biz.service.role.impl
  * @ClassName: RoleServiceImpl
  * @Date: 2019/11/5 09:28
  */

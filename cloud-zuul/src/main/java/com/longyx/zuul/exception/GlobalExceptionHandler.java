@@ -1,4 +1,4 @@
-package com.longyx.zuul.exception;// package com.scaffolding.sophia.zuul.exception;
+package com.longyx.zuul.exception;
 //
 // import com.study.exception.MyRuntimeException;
 // import com.study.result.ResultEnum;

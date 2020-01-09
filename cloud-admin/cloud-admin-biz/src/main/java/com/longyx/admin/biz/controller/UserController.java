@@ -1,12 +1,12 @@
 package com.longyx.admin.biz.controller;
 
-import com.tydic.admin.api.entity.user.User;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.api.vo.UserVo;
-import com.tydic.admin.biz.service.user.UserService;
-import com.tydic.common.base.constants.GlobalsConstants;
-import com.tydic.common.base.support.ApiResponse;
-import com.tydic.common.base.support.BaseController;
+import com.longyx.admin.api.entity.user.User;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.api.vo.UserVo;
+import com.longyx.admin.biz.service.user.UserService;
+import com.longyx.common.base.constants.GlobalsConstants;
+import com.longyx.common.base.support.ApiResponse;
+import com.longyx.common.base.support.BaseController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.controller
+ * @Package: com.longyx.admin.biz.controller
  * @ClassName: UserController
  */
 @RestController

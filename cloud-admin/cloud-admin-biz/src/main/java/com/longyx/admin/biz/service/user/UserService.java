@@ -1,15 +1,15 @@
 package com.longyx.admin.biz.service.user;
 
-import com.tydic.admin.api.entity.user.User;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.api.vo.UserVo;
+import com.longyx.admin.api.entity.user.User;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.api.vo.UserVo;
 
 import java.util.List;
 import java.util.Set;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.user
+ * @Package: com.longyx.admin.biz.service.user
  * @ClassName: UserService
  */
 public interface UserService {

@@ -1,8 +1,8 @@
 package com.longyx.admin.biz.mapper.user;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.tydic.admin.api.entity.user.User;
-import com.tydic.admin.api.vo.UserVo;
+import com.longyx.admin.api.entity.user.User;
+import com.longyx.admin.api.vo.UserVo;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.dao.user
+ * @Package: com.longyx.admin.biz.dao.user
  * @ClassName: UserDao
  */
 @Repository

@@ -1,12 +1,12 @@
 package com.longyx.admin.biz.service.authority;
 
-import com.tydic.admin.api.entity.authority.Authority;
+import com.longyx.admin.api.entity.authority.Authority;
 
 import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.authority
+ * @Package: com.longyx.admin.biz.service.authority
  * @ClassName: AuthorityService
  */
 public interface AuthorityService {

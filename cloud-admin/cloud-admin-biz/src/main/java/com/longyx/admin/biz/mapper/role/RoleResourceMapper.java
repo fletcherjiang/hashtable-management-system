@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.mapper.role;
 
-import com.tydic.admin.api.entity.role.RoleResource;
+import com.longyx.admin.api.entity.role.RoleResource;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;

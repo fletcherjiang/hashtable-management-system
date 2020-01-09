@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.config
+ * @Package: com.longyx.admin.biz.config
  * @ClassName: SecurityConfig
  */
 @EnableWebSecurity

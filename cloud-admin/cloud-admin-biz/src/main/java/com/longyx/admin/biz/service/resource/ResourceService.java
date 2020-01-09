@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.service.resource;
 
-import com.tydic.admin.api.entity.resource.Resource;
+import com.longyx.admin.api.entity.resource.Resource;
 
 import java.util.List;
 

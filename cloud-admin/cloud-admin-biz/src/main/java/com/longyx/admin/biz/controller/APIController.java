@@ -1,16 +1,16 @@
 package com.longyx.admin.biz.controller;
 
-import com.tydic.admin.api.dto.UserDto;
-import com.tydic.admin.api.entity.authority.Authority;
-import com.tydic.admin.api.entity.role.Role;
-import com.tydic.admin.api.entity.user.User;
-import com.tydic.admin.api.vo.UserVo;
-import com.tydic.admin.biz.service.authority.AuthorityService;
-import com.tydic.admin.biz.service.role.RoleService;
-import com.tydic.admin.biz.service.user.UserService;
-import com.tydic.common.base.support.ApiResponse;
-import com.tydic.common.base.support.BaseController;
-import com.tydic.common.security.model.LoginUser;
+import com.longyx.admin.api.dto.UserDto;
+import com.longyx.admin.api.entity.authority.Authority;
+import com.longyx.admin.api.entity.role.Role;
+import com.longyx.admin.api.entity.user.User;
+import com.longyx.admin.api.vo.UserVo;
+import com.longyx.admin.biz.service.authority.AuthorityService;
+import com.longyx.admin.biz.service.role.RoleService;
+import com.longyx.admin.biz.service.user.UserService;
+import com.longyx.common.base.support.ApiResponse;
+import com.longyx.common.base.support.BaseController;
+import com.longyx.common.security.model.LoginUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.controller
+ * @Package: com.longyx.admin.biz.controller
  * @ClassName: APIController
  */
 @RestController

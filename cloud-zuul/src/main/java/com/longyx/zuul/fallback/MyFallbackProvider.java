@@ -1,6 +1,6 @@
 package com.longyx.zuul.fallback;
 
-import com.tydic.common.base.enums.MyHttpStatus;
+import com.longyx.common.base.enums.MyHttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.configurationprocessor.json.JSONException;
@@ -18,7 +18,7 @@ import java.io.InputStream;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.zuul.fallback
+ * @Package: com.longyx.zuul.fallback
  * @ClassName: MyFallbackProvider
  * @Description: 网关熔断配置
  */

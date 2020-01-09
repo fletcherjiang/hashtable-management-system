@@ -1,9 +1,9 @@
 package com.longyx.admin.biz.controller;
 
-import com.tydic.admin.api.vo.LogVo;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.biz.service.log.LogService;
-import com.tydic.common.base.constants.GlobalsConstants;
+import com.longyx.admin.api.vo.LogVo;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.biz.service.log.LogService;
+import com.longyx.common.base.constants.GlobalsConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;

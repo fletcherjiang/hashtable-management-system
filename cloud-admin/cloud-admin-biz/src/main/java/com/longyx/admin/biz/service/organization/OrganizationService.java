@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.service.organization;
 
-import com.tydic.admin.api.entity.organization.SysOrganization;
+import com.longyx.admin.api.entity.organization.SysOrganization;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.longyx.admin.biz.mapper.user;
 
-import com.tydic.admin.api.entity.user.UserRole;
+import com.longyx.admin.api.entity.user.UserRole;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

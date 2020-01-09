@@ -1,12 +1,12 @@
 package com.longyx.admin.biz.service.resource.impl;
 
-import com.tydic.admin.api.entity.resource.Resource;
-import com.tydic.admin.api.entity.role.Role;
-import com.tydic.admin.api.entity.user.User;
-import com.tydic.admin.biz.mapper.resource.ResourceMapper;
-import com.tydic.admin.biz.mapper.user.UserMapper;
-import com.tydic.admin.biz.service.resource.ResourceService;
-import com.tydic.common.base.constants.GlobalsConstants;
+import com.longyx.admin.api.entity.resource.Resource;
+import com.longyx.admin.api.entity.role.Role;
+import com.longyx.admin.api.entity.user.User;
+import com.longyx.admin.biz.mapper.resource.ResourceMapper;
+import com.longyx.admin.biz.mapper.user.UserMapper;
+import com.longyx.admin.biz.service.resource.ResourceService;
+import com.longyx.common.base.constants.GlobalsConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

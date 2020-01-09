@@ -1,10 +1,10 @@
 package com.longyx.admin.biz.service.notice.impl;
 
-import com.tydic.admin.api.entity.notice.Notice;
-import com.tydic.admin.api.vo.NoticeVo;
-import com.tydic.admin.api.vo.PageResultVo;
-import com.tydic.admin.biz.mapper.notice.NoticeMapper;
-import com.tydic.admin.biz.service.notice.NoticeService;
+import com.longyx.admin.api.entity.notice.Notice;
+import com.longyx.admin.api.vo.NoticeVo;
+import com.longyx.admin.api.vo.PageResultVo;
+import com.longyx.admin.biz.mapper.notice.NoticeMapper;
+import com.longyx.admin.biz.service.notice.NoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

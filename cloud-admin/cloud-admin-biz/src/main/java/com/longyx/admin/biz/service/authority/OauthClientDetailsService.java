@@ -1,10 +1,10 @@
 package com.longyx.admin.biz.service.authority;
 
-import com.tydic.admin.api.entity.authority.OauthClientDetails;
+import com.longyx.admin.api.entity.authority.OauthClientDetails;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.service.authority
+ * @Package: com.longyx.admin.biz.service.authority
  * @ClassName: oauthClientDetailsService
  */
 public interface OauthClientDetailsService{

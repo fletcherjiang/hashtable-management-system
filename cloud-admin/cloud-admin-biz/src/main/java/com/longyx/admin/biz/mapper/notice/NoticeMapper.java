@@ -1,7 +1,7 @@
 package com.longyx.admin.biz.mapper.notice;
 
-import com.tydic.admin.api.entity.notice.Notice;
-import com.tydic.admin.api.vo.NoticeVo;
+import com.longyx.admin.api.entity.notice.Notice;
+import com.longyx.admin.api.vo.NoticeVo;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

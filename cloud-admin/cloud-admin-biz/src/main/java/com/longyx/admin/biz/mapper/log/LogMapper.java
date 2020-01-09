@@ -1,7 +1,7 @@
 package com.longyx.admin.biz.mapper.log;
 
-import com.tydic.admin.api.entity.log.Log;
-import com.tydic.admin.api.vo.LogVo;
+import com.longyx.admin.api.entity.log.Log;
+import com.longyx.admin.api.vo.LogVo;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

@@ -1,7 +1,7 @@
 package com.longyx.admin.biz.mapper.authority;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.tydic.admin.api.entity.authority.Authority;
+import com.longyx.admin.api.entity.authority.Authority;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @author: Longyx
- * @Package: com.tydic.admin.biz.dao.authority
+ * @Package: com.longyx.admin.biz.dao.authority
  * @ClassName: AuthorityDao
  */
 @Repository
