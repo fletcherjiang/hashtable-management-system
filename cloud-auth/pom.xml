@@ -13,7 +13,7 @@
     <artifactId>cloud-auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>cloud-auth</name>
-    <description>认证服务</description>
+    <description>auth 认证服务</description>
 
     <dependencies>
         <!--web-->
