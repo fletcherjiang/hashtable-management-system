@@ -22,7 +22,7 @@ spring:
                 name: oauth-hystrix
                 fallbackUri: forward:/common/fallback #设置熔断器
         - id: sophia-admin
-          uri: lb://sophia-admin
+          uri: lb://cloud-admin
           predicates:
             - Path=/api/admin/**
           filters:
