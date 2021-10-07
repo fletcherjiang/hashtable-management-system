@@ -1,9 +1,0 @@
-server:
-  port: 9999
-spring:
-  application:
-    name: cloud-consumer
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://joe:hadoop@localhost:8761/eureka/
